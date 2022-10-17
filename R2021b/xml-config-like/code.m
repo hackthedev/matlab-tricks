@@ -1,6 +1,12 @@
 function results = GetConfigValue(~, file, tag)
-    % This is used to get a specific value 
-    % einem HTML/XML ähnlichen Format.
+    % This is used to get a specific value from the config text file
+    %
+    % Parameter:
+    % ~ : app
+    % file : File path to the target file
+    % tag : The option you are trying to find in the text file, i.e. "CreationDate",
+    % will try to find a tag like "<CreationDate>01.01.1990</CreationDate>" and will 
+    % return the value between the tags, in this case "01.01.1990".
 
     % Folgender Regex Ausdruckt gibt uns den Wert zwischen den Klammern zurück
     filecontent = fileread(file);
