@@ -29,7 +29,7 @@ end
 
 function UpdateConfig(app, file, option, value)
     % This function is looking for a tag in the specified file "file" 
-    %
+    % 
 
     fid = fileread(file);
     filecontent_split = regexp(fid,'\n','split');
