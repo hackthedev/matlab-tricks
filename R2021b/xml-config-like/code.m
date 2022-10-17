@@ -1,5 +1,5 @@
 function results = GetConfigValue(~, file, tag)
-    % This is used to get a specific value from the config text file
+    % This is used to get a specific value from the config text file.
     %
     % Parameter:
     % ~ : app
@@ -8,13 +8,14 @@ function results = GetConfigValue(~, file, tag)
     % will try to find a tag like "<CreationDate>01.01.1990</CreationDate>" and will 
     % return the value between the tags, in this case "01.01.1990".
 
-    % Folgender Regex Ausdruckt gibt uns den Wert zwischen den Klammern zurück
+    % The following regex will get the text between the tags
     filecontent = fileread(file);
     pat = regexp(filecontent, '<' + tag + '>(.*?)</' + tag + '>', 'tokens');
     s = string(pat);
 
-    % Gibt die Zeile zurück wenn die Option in der Config Datei
-    % gefunden wurde. Wird jedoch nicht verwendet
+    % You can add an additional parameter to the function and call it, as in this 
+    % exmaple "line", and when set you can then search the file for the value you're
+    % looking and get the line number where it is being stored in the file.
     line = false;            
     if line == true
         filecontent_split = regexp(filecontent,'\n','split');
@@ -27,8 +28,8 @@ function results = GetConfigValue(~, file, tag)
 end
 
 function UpdateConfig(app, file, option, value)
-    % Sucht einen speziellen Tag, zB <beispiel>1</beispiel>
-    % und ändert den Wert zwischen den Tags, in dem Fall 1
+    % This function is looking for a tag in the specified file "file" 
+    %
 
     fid = fileread(file);
     filecontent_split = regexp(fid,'\n','split');
