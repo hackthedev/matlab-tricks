@@ -28,20 +28,30 @@ function results = GetConfigValue(~, file, tag)
 end
 
 function UpdateConfig(app, file, option, value)
-    % This function is looking for a tag in the specified file "file" 
-    % 
+    % This function is looking for a tag "option" in the specified file "file" 
+    % and replaces its value between the tags with "value". You can also use it
+    % add new values to the file as its adding them to the file if they're not
+    % already existing.
+    %
+    % Example:
+    % file = test.txt
+    % option = "Date"
+    % value = "01.01.2022"
+    %
+    % It would look through the file test.txt to find a tag like "<Date>01.01.1990</Date>"
+    % and replaces the current value in the file "01.01.1990" with "01.01.2022".
 
     fid = fileread(file);
     filecontent_split = regexp(fid,'\n','split');
 
-    % Suche nach dem String
+    % Searching for the string
     i = 1;
     lineFound = 0;
     for k = 1:length(filecontent_split)
         l(k) = filecontent_split(k);
         i = k;
 
-
+        % Line found!
         if filecontent_split(k) == "<" + option + ">" + GetConfigValue(app, file, option) + "</" + option + ">"
            lineFound = k;
 
@@ -50,14 +60,14 @@ function UpdateConfig(app, file, option, value)
 
     end
 
-    % wenn es die zeile nicht gibt, erstelle sie
+    % If the line didnt exist, add it to the file
     fid = fopen(file, 'w');
     if lineFound == 0
         cellstr("<" + option + ">" + value + "</" + option + ">")
         filecontent_split(i+1) = cellstr("<" + option + ">" + value + "</" + option + ">");
     end
 
-    % Schreibe die neue datei
+    % Write the updated file
     for i = 1:length(filecontent_split)                
         if i == length(filecontent_split)
             fprintf(fid,'%s', filecontent_split{i});
