@@ -3,6 +3,14 @@ Its not a new issue that the App Designer and its resize behaviour is something 
 
 In order for this to work you need to use a Grid Layout, like in the screenshot, and add 1 extra row and column for resizing. In my case i used Column 9, row 12. To find out which column and row you have to change programmatically, i'd recommend copying the ColumnWidth and RowHeight Property and replacing the desired value with the variable used in the code in [here](code.m)
 
+I used this piece of code to update my size:
+```matlab
+% Window button motion function: UIFigure
+function UIFigureWindowButtonMotion(app, event)
+    betterResize(app);
+end
+```
+
 
 ![image](https://user-images.githubusercontent.com/40896559/196919350-f1131964-b368-409f-95d5-d9d880ed3aca.png)
 ![image](https://user-images.githubusercontent.com/40896559/196933525-96922101-dd4a-417c-9c86-7158e54863b1.png)
