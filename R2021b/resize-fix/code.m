@@ -75,7 +75,8 @@ function betterResize(app)
             app.GridLayout.ColumnWidth = {2,25,200,31,100,100, (80 + (abs(adjustedWidth) - paddingWidth)) / 2 ,100, (abs(adjustedWidth) - paddingWidth) / 2 ,180,40,40};
             app.GridLayout.RowHeight = {10,38,10,52,52,52,52,52,29,22,22, abs(adjustedHeight) - paddingHeight ,22,22,22,22,22};
         catch ME
-            % Fehler ignorieren
+            % Can cause a error from time to time but it can be ignored.
+            % Happens when the size is smaller than the original one. 
         end
     end
 end
