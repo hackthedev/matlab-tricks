@@ -19,6 +19,13 @@ function startupFcn(app)
   betterResize(app);
 end
 
+% Window button motion function: UIFigure
+function UIFigureWindowButtonMotion(app, event)
+    % Thats the reason why i used to check if its only 
+    % that one tab so im not updating the size all the time
+    betterResize(app);
+end
+
 function betterResize(app)
     % Variables defined in "OnLoad" of the Application.
     global originalHeight;
