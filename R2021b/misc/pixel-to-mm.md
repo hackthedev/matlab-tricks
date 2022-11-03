@@ -1,6 +1,6 @@
 If we take the code from this example[^1], where we tried to 
 [calculate the distance between two points](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/misc/distance-between-points.md), we can use the
-number calculated in pixel and convert it into pixels.
+number calculated in pixel and convert it into milimeter.
 
 In my example, i tried measuring distances in an image taken from a camera. In order to get the scale right, i used to take a photo of a ruler, mark the 
 distance between two marks for one milimeter on the ruler and device the number from `d` with the distance from the one milimeter of the ruler image,
