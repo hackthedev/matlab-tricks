@@ -8,7 +8,8 @@ which in my case was about 16 pixel for 1 milimeter.
 
 For this to work reliable, the distance of the object i tried to measure with the camera had to be the same as good as possible, because if the object was 
 closer or further away, this pixel value of about 16px per mm would change.
-```
+
+```matlab
 % Location 1 (X, Y)
 x1 = 50;
 y1 = 50;
