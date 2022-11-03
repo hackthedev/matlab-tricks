@@ -1,3 +1,4 @@
+If you want to avoid adding the same item multiple times to your ListBox, look no further! The following code will check if the string you want to add does already exist in the ListBox's Items. This way, if the string you want to add wasnt found, it doesnt exist, therefore making the string unique then.
 
 ```matlab
 
