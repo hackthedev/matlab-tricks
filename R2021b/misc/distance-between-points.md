@@ -15,7 +15,7 @@ d=sqrt((y2-y1)^2+(x2-x1)^2);
 
 % Result: 70.7107 Pixel
 ```
-You can also conver the pixels to milimeter [^px2mm] as i did in my case.
+You can also convert the pixels to milimeter [^px2mm] as i did in my case.
 
 [^1]: If you change `y1` and `y2` to 0, the calculated distance will return 50.
 [^px2mm]: [Convert Pixel to Milimeter from Camera Image](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/misc/pixel-to-mm.md)
