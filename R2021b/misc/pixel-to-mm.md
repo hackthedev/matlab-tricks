@@ -1,4 +1,4 @@
-If we take the code from this example[^calcBetweenPoints], where we tried to 
+If we take the code from this example[^1], where we tried to 
 [calculate the distance between two points](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/misc/distance-between-points.md), we can use the
 number calculated in pixel and convert it into pixels.
 
@@ -41,4 +41,4 @@ After drawing a line using `drawline()` on the photo, i calculated the distance 
 ![image](https://user-images.githubusercontent.com/40896559/199664192-f035651f-dca3-49b9-bd15-6a9bf0992827.png)
 
 
-[^calcBetweenPoints]: [How to calculate the distance between two points](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/misc/distance-between-points.md)
+[^1]: [How to calculate the distance between two points](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/misc/distance-between-points.md)
