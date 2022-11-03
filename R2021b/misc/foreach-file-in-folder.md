@@ -1,6 +1,6 @@
-The following code will allow you to loop through all files in a directory, and is referencing to serveral other tricks here [^1][^2]
+The following code will allow you to loop through all files in a directory, and is referencing to serveral other tricks here, like the `ClearList()` function [^1] as well as the `duplicate entry check` for ListBoxes [^2].
 ```matlab
-ClearList(app, app.ThemesListBox);
+ClearList(app, app.ListBox);
             
 % The path to the folder containing the files you want to get
 D = string(ls("path/to/files/"));
