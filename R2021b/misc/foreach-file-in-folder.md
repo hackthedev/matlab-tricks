@@ -1,4 +1,4 @@
-The following code will allow you to loop through all files in a directory, and is referencing to serveral other tricks here [^clearList][^addUnique]
+The following code will allow you to loop through all files in a directory, and is referencing to serveral other tricks here [^1][^2]
 ```matlab
 ClearList(app, app.ThemesListBox);
             
@@ -31,5 +31,5 @@ end
 fclose('all');
 ```
 
-[^clearList]: [ClearList()](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/listbox/clear-items.md)
-[^addUnique]: [ListBox avoid duplicate entries](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/listbox/add-item-unique.md)
+[^1]: [ClearList()](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/listbox/clear-items.md)
+[^2]: [ListBox avoid duplicate entries](https://github.com/hackthedev/matlab-tricks/blob/main/R2021b/listbox/add-item-unique.md)
