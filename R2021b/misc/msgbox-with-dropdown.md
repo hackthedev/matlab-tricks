@@ -22,8 +22,10 @@ function results = msgList(list, prompt, title)
         counter = counter + 1;
     end
     
-    [index,tf] = listdlg('PromptString',[{prompt}, lineBreaks], 'ListString',list, "SelectionMode", "single", "Name", title);
-    results = list{index};                              
+    [index,tf] = listdlg('PromptString',[{prompt}, lineBreaks], 'ListString',list, ...
+                "SelectionMode", "single", "Name", title, "ListSize", [160, 100]);
+            
+    results = list{index};                            
 end
 ```
 
