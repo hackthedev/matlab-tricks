@@ -26,3 +26,7 @@ function results = msgList(list, prompt, title)
     results = list{index};                              
 end
 ```
+
+<br>
+
+![image](https://user-images.githubusercontent.com/40896559/200276274-454367ab-ba62-4909-8868-ccdee34e2e1e.png)
